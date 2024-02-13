@@ -11,7 +11,7 @@ __engine: Optional[AsyncEngine] = None
 def create_engine() -> Optional[AsyncEngine]:
     global __engine
 
-    conn_str: str = "postgresql+asyncpg://postgres:pwpwlocalhost:5432/postgres"
+    conn_str: str = "postgresql+asyncpg://postgres:pw@localhost:5432/postgres"
     __engine = create_async_engine(url=conn_str, echo=False)
     return __engine
 

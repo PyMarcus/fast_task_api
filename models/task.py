@@ -8,7 +8,7 @@ Base = declarative_base()
 
 
 class Task(Base):
-    __tablename__: str = "tasks"
+    __tablename__: str = "task"
 
     id: Optional[int] = sa.Column(sa.Integer, primary_key=True, autoincrement=True)
     title: str = sa.Column(sa.String(100), nullable=False)
